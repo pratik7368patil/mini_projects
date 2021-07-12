@@ -25,7 +25,9 @@ function mapProjects() {
   let ol = document.createElement("ol");
   for (let i = 0; i < PROJECT_DATA.length; i++) {
     let project = PROJECT_DATA[i];
-    ol.appendChild(createLink(project));
+    let li = document.createElement("li");
+    li.appendChild(createLink(project));
+    ol.appendChild(li);
   }
   domNodes.mainDiv.appendChild(ol);
 }
